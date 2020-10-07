@@ -13,17 +13,9 @@ public class Tests {
     public void testEquality() {
         assertTrue(new Money.dollar(5).equals(new Money.dollar(5)));
         assertFalse(new Money.dollar(5).equals(new Money.dollar(6)));
-        assertTrue(new Money.dollar(5).equals(new Money.dollar(5)));
-        assertFalse(new Money.dollar(5).equals(new Money.dollar(6)));
+        assertFalse(Money.franc(5).equals(Money.dollar(5)));
     }
 
-    @Test
-    public void testFrancMultiplication() {
-        Money five = new Money.franc(5);
-        assertEquals(new Money.franc(10), five.times(2));
-        assertEquals(new Money.franc(15), five.times(3));
-    
-    }
 
     @Test
     public void testCurrency() {
